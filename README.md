@@ -13,7 +13,39 @@ For Android users, you can publish your sticker app to the [Google Play Store](h
 
 ## Get started :rocket:
 
-To get started, review the `README` file in the [Android](https://github.com/WhatsApp/stickers/tree/master/Android) folder, and refer to the [FAQ](https://faq.whatsapp.com/general/26000226).
+To get started, review the detailed instructions below, and refer to the [FAQ](https://faq.whatsapp.com/general/26000226).
+
+## Quick Start
+
+1. **Open the project in Android Studio**
+2. **Add your stickers** to `app/src/main/assets/` in numbered folders (1, 2, 3, etc.)
+3. **Update the configuration** in `app/src/main/assets/contents.json`
+4. **Build and test** your sticker app
+
+## Sticker Requirements
+
+- **Format:** WebP (`.webp`) format only
+- **Size:** 512x512 pixels (square)
+- **File size:** Maximum 100KB per static sticker, 500KB per animated sticker
+- **Pack size:** 3-30 stickers per pack
+- **Tray icon:** 96x96 pixels PNG
+
+## Project Structure
+
+```
+Stickers/
+├── app/                    # Main Android app
+│   └── src/main/
+│       ├── assets/         # Sticker files and configuration
+│       │   ├── 1/          # Sticker pack 1
+│       │   ├── 2/          # Sticker pack 2
+│       │   └── contents.json
+│       ├── java/           # Android source code
+│       └── res/            # App resources
+├── gradle/                 # Gradle wrapper
+├── build.gradle           # Project build configuration
+└── README.md              # This file
+```
 
 ## Announcements :loudspeaker:
 Please check out [Announcements](https://github.com/WhatsApp/stickers/wiki/Animated-Stickers) for recent changes.
